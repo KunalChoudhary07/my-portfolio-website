@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kunal Choudhary | Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="loader-wrapper">
+                <div class="loader-box">
+                    <div class="loader-shadow"></div>
+                    <div class="loader-gravity">
+                        <div class="loader-ball"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="loader-logo">
+                <span class="logo-char">Kunal</span>
+                <span class="logo-char">Choudhary</span>
+            </div>
+            <div class="loader-progress-wrapper">
+                <div class="loader-progress-track">
+                    <div class="loader-progress-fill" id="loaderProgress"></div>
+                </div>
+                <span class="loader-percent" id="loaderPercent">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Effects -->
+    <div class="bg-effects">
+        <div class="bg-noise"></div>
+        <div class="bg-gradient-mesh"></div>
+        <div class="bg-grid-lines"></div>
+        <div class="bg-glow glow-1"></div>
+        <div class="bg-glow glow-2"></div>
+        <div class="floating-particles" id="particles"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Navigation -->
+        <nav class="navbar" id="navbar">
+            <div class="container">
+                <a href="#" class="logo">KC</a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-right">
+                    <a href="https://github.com/KunalChoudhary07" target="_blank" class="nav-icon" data-tooltip="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kunal-choudhary-kc07" target="_blank" class="nav-icon" data-tooltip="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-tag animate-on-scroll">
+                        <span class="tag-dot"></span>
+                        <span>Available for Opportunities</span>
+                    </div>
+                    
+                    <h1 class="hero-title animate-on-scroll delay-1">
+                        <span class="title-line">I'm</span>
+                        <span class="title-name">Kunal Choudhary</span>
+                    </h1>
+                    
+                    <p class="hero-subtitle animate-on-scroll delay-2">
+                        <span class="typing-text" id="typingText"></span>
+                        <span class="typing-cursor">|</span>
+                    </p>
+                    
+                    <p class="hero-description animate-on-scroll delay-3">
+                        Computer Science student at Chandigarh University with <strong>8.42 CGPA</strong>. 
+                        Passionate about building innovative solutions in IoT, AI, and Full Stack Development.
+                        Learning React, DSA, and competitive programming to sharpen problem-solving skills.
+                        Let's connect and create something amazing together!
+                    </p>
+                    
+                    <div class="hero-buttons animate-on-scroll delay-4">
+                        <a href="#projects" class="btn btn-primary magnetic">
+                            <span>View Projects</span>
+                            <i class="fas fa-arrow-down"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-glass magnetic">
+                            <span>Get in Touch</span>
+                        </a>
+                        <a href="./assets/Kunal_Choudhary_CV.pdf" download="Kunal_Choudhary_CV" class="btn btn-cv magnetic">
+                            <i class="fas fa-download"></i>
+                            <span>Download CV</span>
+                        </a>
+                    </div>
+                    
+                    <div class="hero-stats animate-on-scroll delay-5">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="8">0</span>
+                            <span class="stat-plus">+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="8.42" data-decimal="true">0</span>
+                            <span class="stat-label">CGPA</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="3">0</span>
+                            <span class="stat-suffix">rd</span>
+                            <span class="stat-label">Ideathon '25</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual animate-on-scroll delay-3">
+                    <div class="visual-card">
+                        <div class="card-glow"></div>
+                        <div class="card-content">
+                            <div class="code-line">
+                                <span class="code-keyword">const</span> 
+                                <span class="code-var">developer</span> = {
+                            </div>
+                            <div class="code-line indent">
+                                <span class="code-prop">name</span>: 
+                                <span class="code-string">"Kunal"</span>,
+                            </div>
+                            <div class="code-line indent">
+                                <span class="code-prop">skills</span>: 
+                                <span class="code-array">[<span class="code-string">"React"</span>, <span class="code-string">"IoT"</span>]</span>,
+                            </div>
+                            <div class="code-line indent">
+                                <span class="code-prop">passion</span>: 
+                                <span class="code-string">"Building Cool Stuff"</span>
+                            </div>
+                            <div class="code-line">};</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+                <span>Scroll</span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-tag"></span>
+                    <h2 class="section-title">About Me</h2>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-text animate-on-scroll">
+                        <p class="about-lead">A passionate developer turning ideas into reality through code.</p>
+                        <p>I specialize in creating IoT systems, web applications, and AI-powered solutions. From winning at Ideathon 2025 to conducting impactful social research, I thrive on challenges that push innovation.</p>
+                        
+                        <div class="education-badge">
+                            <div class="edu-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="edu-info">
+                                <strong>B.E. Computer Science</strong>
+                                <span>Chandigarh University • 2024-2028</span>
+                            </div>
+                        </div>
+
+                        <!-- CV Download Card -->
+                        <div class="cv-download-card">
+                            <div class="cv-icon">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <div class="cv-info">
+                                <strong>My Resume</strong>
+                                <span>Download my detailed CV</span>
+                            </div>
+                            <a href="./assets/Kunal_Choudhary_CV.pdf" download="Kunal_Choudhary_CV" class="cv-download-btn">
+                                <i class="fas fa-download"></i>
+                                <span>Download</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="about-cards">
+                        <div class="highlight-card animate-on-scroll delay-1" data-tilt>
+                            <div class="card-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="card-text">
+                                <strong>3rd Place</strong>
+                                <span>Ideathon 2025</span>
+                            </div>
+                        </div>
+                        <div class="highlight-card animate-on-scroll delay-2" data-tilt>
+                            <div class="card-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="card-text">
+                                <strong>Full Stack</strong>
+                                <span>Learning Journey</span>
+                            </div>
+                        </div>
+                        <div class="highlight-card animate-on-scroll delay-3" data-tilt>
+                            <div class="card-icon">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <div class="card-text">
+                                <strong>IoT Expert</strong>
+                                <span>Hardware + Software</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-tag"></span>
+                    <h2 class="section-title">Featured Projects</h2>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card animate-on-scroll" data-tilt>
+                        <div class="project-header">
+                            <div class="project-icon gradient-1">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                <a href="https://github.com/KunalChoudhary07" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>Portfolio Website</h3>
+                        <p>Modern responsive portfolio with smooth animations and dark theme.</p>
+                        <div class="project-tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card animate-on-scroll delay-1" data-tilt>
+                        <div class="project-header">
+                            <div class="project-icon gradient-2">
+                                <i class="fas fa-terminal"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/KunalChoudhary07/command-line-interface-blogging-platform" target="_blank" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>CLI Blogging Platform</h3>
+                        <p>Command-line blogging with authentication and file handling.</p>
+                        <div class="project-tags">
+                            <span>C++</span><span>CLI</span><span>File I/O</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card animate-on-scroll delay-2" data-tilt>
+                        <div class="project-header">
+                            <div class="project-icon gradient-3">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>Smart Irrigation</h3>
+                        <p>IoT-based automatic irrigation using soil moisture sensors.</p>
+                        <div class="project-tags">
+                            <span>Arduino</span><span>IoT</span><span>Sensors</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 4 -->
+                    <article class="project-card animate-on-scroll delay-3" data-tilt>
+                        <div class="project-header">
+                            <div class="project-icon gradient-4">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>Calorie Predictor AI</h3>
+                        <p>ML model predicting calories from physical activity data.</p>
+                        <div class="project-tags">
+                            <span>Python</span><span>ML</span><span>Scikit-learn</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 5 -->
+                    <article class="project-card animate-on-scroll delay-4" data-tilt>
+                        <div class="project-header">
+                            <div class="project-icon gradient-5">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>Smart Street Lights</h3>
+                        <p>ESP32-based automatic street lighting for energy saving.</p>
+                        <div class="project-tags">
+                            <span>ESP32</span><span>C++</span><span>IoT</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 6 -->
+                    <article class="project-card animate-on-scroll delay-5" data-tilt>
+                        <div class="project-header">
+                            <div class="project-icon gradient-6">
+                                <i class="fas fa-universal-access"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>Assistive EdTech</h3>
+                        <p>Technology for accessible learning - Ideathon finalist.</p>
+                        <div class="project-tags">
+                            <span>EdTech</span><span>Innovation</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-tag"></span>
+                    <h2 class="section-title">Skills & Tech</h2>
+                </div>
+                
+                <div class="skills-container">
+                    <div class="skill-category animate-on-scroll">
+                        <h4><i class="fas fa-code"></i> Languages</h4>
+                        <div class="skill-pills">
+                            <div class="skill-pill" data-tilt>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="">
+                                <span>C++</span>
+                            </div>
+                            <div class="skill-pill" data-tilt>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="">
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-pill" data-tilt>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="">
+                                <span>Java</span>
+                            </div>
+                            <div class="skill-pill" data-tilt>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="">
+                                <span>C</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category animate-on-scroll delay-1">
+                        <h4>
+                            <i class="fas fa-laptop-code"></i> Web Dev 
+                            <span class="learning-tag">Learning</span>
+                        </h4>
+                        <div class="skill-pills">
+                            <div class="skill-pill" data-tilt>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="">
+                                <span>HTML5</span>
+                            </div>
+                            <div class="skill-pill" data-tilt>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="">
+                                <span>CSS3</span>
+                            </div>
+                            <div class="skill-pill" data-tilt>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="">
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-pill" data-tilt>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="">
+                                <span>React</span>
+                            </div>
+                            <div class="skill-pill" data-tilt>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="">
+                                <span>Node.js</span>
+                            </div>
+                            <div class="skill-pill" data-tilt>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="">
+                                <span>Express</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category animate-on-scroll delay-2">
+                        <h4><i class="fas fa-microchip"></i> IoT & Tools</h4>
+                        <div class="skill-pills">
+                            <div class="skill-pill" data-tilt>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="">
+                                <span>Arduino</span>
+                            </div>
+                            <div class="skill-pill" data-tilt>
+                                <i class="fas fa-microchip"></i>
+                                <span>ESP32</span>
+                            </div>
+                            <div class="skill-pill" data-tilt>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="">
+                                <span>Git</span>
+                            </div>
+                            <div class="skill-pill" data-tilt>
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="">
+                                <span>Linux</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category animate-on-scroll delay-3">
+                        <h4><i class="fas fa-brain"></i> Soft Skills</h4>
+                        <div class="soft-skill-tags">
+                            <span>Public Speaking</span>
+                            <span>Problem Solving</span>
+                            <span>Team Management</span>
+                            <span>Leadership</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <span class="section-tag"></span>
+                    <h2 class="section-title">Get in Touch</h2>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-info animate-on-scroll">
+                        <h3>Let's Build Something Amazing</h3>
+                        <p>Open to opportunities, collaborations, and interesting conversations about tech.</p>
+                        
+                        <div class="contact-links">
+                            <a href="mailto:Kc7kunal@gmail.com" class="contact-link" data-tilt>
+                                <div class="link-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="link-text">
+                                    <span>Email</span>
+                                    <strong>Kc7kunal@gmail.com</strong>
+                                </div>
+                            </a>
+                            <a href="https://www.linkedin.com/in/kunal-choudhary-kc07" target="_blank" class="contact-link" data-tilt>
+                                <div class="link-icon"><i class="fab fa-linkedin-in"></i></div>
+                                <div class="link-text">
+                                    <span>LinkedIn</span>
+                                    <strong>kunal-choudhary-kc07</strong>
+                                </div>
+                            </a>
+                            <a href="https://github.com/KunalChoudhary07" target="_blank" class="contact-link" data-tilt>
+                                <div class="link-icon"><i class="fab fa-github"></i></div>
+                                <div class="link-text">
+                                    <span>GitHub</span>
+                                    <strong>KunalChoudhary07</strong>
+                                </div>
+                            </a>
+                            <div class="contact-link" data-tilt>
+                                <div class="link-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="link-text">
+                                    <span>Location</span>
+                                    <strong>Jaipur, India</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-wrapper animate-on-scroll delay-1">
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" required placeholder=" ">
+                                <label for="name">Your Name</label>
+                                <span class="focus-line"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" required placeholder=" ">
+                                <label for="email">Your Email</label>
+                                <span class="focus-line"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="subject" name="subject" required placeholder=" ">
+                                <label for="subject">Subject</label>
+                                <span class="focus-line"></span>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                                <label for="message">Message</label>
+                                <span class="focus-line"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full magnetic" id="submitBtn">
+                                <span class="btn-text">
+                                    <i class="fas fa-paper-plane"></i>
+                                    Send Message
+                                </span>
+                                <span class="btn-loading">
+                                    <i class="fas fa-circle-notch fa-spin"></i>
+                                    Sending...
+                                </span>
+                            </button>
+                        </form>
+                        <div id="formStatus" class="form-status">
+                            <div class="status-success">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Message sent! I'll get back to you soon.</span>
+                            </div>
+                            <div class="status-error">
+                                <i class="fas fa-exclamation-circle"></i>
+                                <span>Failed to send. Please try again.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <a href="#" class="footer-logo">KC</a>
+                    <p>© 2025 Kunal Choudhary. All rights reserved.</p>
+                    <div class="footer-socials">
+                        <a href="https://github.com/KunalChoudhary07" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/kunal-choudhary-kc07" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:Kc7kunal@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Floating CV Download Button -->
+        <div class="floating-cv-btn" id="floatingCV">
+            <a href="./assets/Kunal_Choudhary_CV.pdf" download="Kunal_Choudhary_CV" class="cv-float-link">
+                <div class="cv-float-icon">
+                    <i class="fas fa-file-download"></i>
+                </div>
+                <span class="cv-float-text">Download CV</span>
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
